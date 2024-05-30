@@ -1,0 +1,27 @@
+﻿<p>Client Name: @ViewData["ClientName"]</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in (List<Product>)ViewData["Products"])
+        {
+            <tr>
+                <td>@product.Name</td>
+                <td>@product.Price</td>
+                <td>
+                    <form method="post" action="@Url.Action("AddToPurchase", "Client")">
+                        <input type="hidden" name="clientId" value="@ViewData["ClientId"]" /> 
+                        <input type="hidden" name="productId" value="@product.ProductId" />
+                        <button type="submit" class="btn btn-primary">Zamów</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

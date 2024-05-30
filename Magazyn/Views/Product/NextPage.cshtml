@@ -1,0 +1,28 @@
+﻿@model Magazyn.Models.Product
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+</head>
+<body>
+    <h1>Add Product</h1>
+    <p>Employee Name: @ViewBag.EmployeeName</p>
+    <p>Employee ID: @ViewBag.EmployeeId</p>
+
+    @using (Html.BeginForm("NextPage", "Product", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+        <input type="hidden" name="employeeId" value="@ViewBag.EmployeeId" />
+        <input type="hidden" name="employeeName" value="@ViewBag.EmployeeName" />
+
+        <label for="productName">Product Name:</label>
+        <input type="text" id="productName" name="productName" required>
+
+        <button type="submit">Add Product</button>
+    }
+</body>
+</html>

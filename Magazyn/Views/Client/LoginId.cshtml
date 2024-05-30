@@ -1,0 +1,80 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@* @model Magazyn.Models.Client
+
+@{
+    ViewBag.Title = "Login ID";
+}
+
+<h2>Login ID</h2>
+
+<form asp-action="LoginId" method="post">
+    <div class="form-group">
+        <label for="id">Client ID</label>
+        <input type="number" class="form-control" id="id" name="id" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Check</button>
+</form>
+
+
+ *@
+
+ @model Client
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Client Purchases</title>
+</head>
+<body>
+    <h1>Find Client Purchases</h1>
+    <form asp-action="LoginId" method="post">
+        <div>
+            <label for="id">Client ID:</label>
+            <input type="number" id="id" name="id" required />
+            <button type="submit">Search</button>
+        </div>
+    </form>
+
+    @if (!ViewData.ModelState.IsValid)
+    {
+        <div>
+            @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+            {
+                <p style="color: red;">@error.ErrorMessage</p>
+            }
+        </div>
+    }
+
+    @if (Model != null)
+    {
+        <h2>Client Details</h2>
+        <p>Name: @Model.Name</p>
+
+        <h3>Purchases</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Purchase ID</th>
+                    <th>Product Name</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var purchase in Model.Purchases)
+                {
+                    <tr>
+                        <td>@purchase.PurchaseId</td>
+                        <td>@purchase.Product.Name</td>
+                        <td>@purchase.Product.Price.ToString("C")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</body>
+</html>
