@@ -1,27 +1,25 @@
 # Warehouse-management
 
 A simple form to get the customer to log in 
+![obraz](https://github.com/linijka123/Warehouse-managment1/assets/86550898/0e179074-dd5f-479c-883d-8ad4d7f844e8)
 
-![obraz](https://github.com/linijka123/Warehouse-management/assets/86550898/4ba8730e-6bf0-4351-a0ec-6b3215500b49)
 
 
 
 Products available for purchase
+![obraz](https://github.com/linijka123/Warehouse-managment1/assets/86550898/9e400b99-532e-49d6-85ef-362847c677c0)
 
 
-![obraz](https://github.com/linijka123/Warehouse-management/assets/86550898/4ab56f2d-d201-451c-8fde-69688d05b33c)
 
 
 Each customer purchase is recorded in the database in the purchases table
 
 
-![obraz](https://github.com/linijka123/Warehouse-management/assets/86550898/9bf211fe-e542-4968-a161-3ff1cf5337d2)
+![obraz](https://github.com/linijka123/Warehouse-managment1/assets/86550898/af8e33db-f907-4b40-bf3f-a554f7c4c64d)
 
 
-With the help of razor page I create a display of each product 
-With the help of razor page I create a display of each product , the AddToPurchase control creates a new object of class customer, thus adding a new customer with his purchase
 
+The employee logs in and can add a product
+![obraz](https://github.com/linijka123/Warehouse-managment1/assets/86550898/c8082771-fec5-4a23-b360-3d44c03c1449)
 
-![obraz](https://github.com/linijka123/Warehouse-management/assets/86550898/872c7d85-a9be-4271-8536-0bd71ea40f20)
-![obraz](https://github.com/linijka123/Warehouse-management/assets/86550898/1bf13a32-e23d-4503-8052-50dab9ce0898)
 
